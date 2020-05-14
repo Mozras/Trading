@@ -10,8 +10,7 @@ import com.acme.mytrader.price.PriceSource;
  * that when they breach a trigger level orders can be executed automatically
  * </pre>
  */
-public class TradingStrategy implements PriceListener
-{
+public class TradingStrategy implements PriceListener {
 	
 	private final ExecutionService executionService;
 	private final PriceSource priceSource;
@@ -27,8 +26,7 @@ public class TradingStrategy implements PriceListener
 	 * @param  priceToBuy         Set price of stock to buy at
 	 * @param  securityToBuy      Holds symbol for stock to buy
 	 */
-	public TradingStrategy(int amountToBuy, ExecutionService executionService, double priceToBuy, PriceSource priceSource, String securityToBuy)
-	{
+	public TradingStrategy(int amountToBuy, ExecutionService executionService, double priceToBuy, PriceSource priceSource, String securityToBuy) {
 		this.amountToBuy = amountToBuy;
 		this.executionService = executionService;
 		this.priceSource = priceSource;

@@ -25,7 +25,8 @@ public class ApiExecutionServiceTest {
         int volume = 200;
 
         String string = Buy.buy(security, price, volume);
-        assert string.equals("Bought " + volume + " " + security +  " stock @ " + price);
+        assert string.equals("\nBought " + volume + " " + security +" shares for:");
+
     }
 
 }

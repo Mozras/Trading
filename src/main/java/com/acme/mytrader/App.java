@@ -9,8 +9,7 @@ import com.acme.mytrader.strategy.TradingStrategy;
 /**
  * executes the main trading strategy
  */
-public class App
-{
+public class App {
 	/**
 	 * @param security  Stock symbol
 	 * @return returns price of stock
@@ -24,29 +23,33 @@ public class App
 	 *
 	 * @param  security  Stock symbol
 	 */
-	public static void buildTradingStrategy(int amount, double price, ApiPriceSource priceSource, String security) {
+	public static void buildTradingStrategy(int amount, double price, ApiPriceSource priceSource, String security)
+	{
 		ApiExecutionService executionService = new ApiExecutionService();
-
 		TradingStrategy myTradingStrategy = new TradingStrategy(amount, executionService, price, priceSource, security);
 	}
 
 	/**
-	 * todo: add input validation
+	 *
 	 * execute program logic by taking user input
 	 *
 	 * @param args   stock, price and volume intended to buy at.
 	 */
 	public static void main(String[] args) {
-
+		//TODO add input validation
 		Scanner input = new Scanner(System.in);
-
-		System.out.println("security:");
+		System.out.println("Stock:");
 		String security = input.next();
 
-		System.out.println("price:");
+		while(!security.matches("[a-zA-Z]+")) {
+			System.out.println("Please enter a valid stock: ");
+			security = input.next();
+		}
+
+		System.out.println("Price:");
 		double price = input.nextDouble();
 
-		System.out.println("amount:");
+		System.out.println("Volume:");
 		int amount = input.nextInt();
 
 		ApiPriceSource ps = buildApiPriceSource(security);

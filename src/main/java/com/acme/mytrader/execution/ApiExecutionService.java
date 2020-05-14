@@ -1,7 +1,7 @@
 package com.acme.mytrader.execution;
 
-public class ApiExecutionService implements ExecutionService
-{
+public class ApiExecutionService implements ExecutionService{
+
 	/**
 	 * buys the current selected stock at a specific volume and price
 	 *
@@ -11,9 +11,8 @@ public class ApiExecutionService implements ExecutionService
 	 *
 	 * @return  returns the string message created
 	 */
-	public String buy(String security, double price, int volume)
-    {
-    	String message = "Bought " + volume + " " + security +  " stock @ " + price;
+	public String buy(String security, double price, int volume) {
+    	String message = "\nBought " + volume + " " + security +" shares for:";
     	System.out.println(message);
 		return message;
 	}
@@ -26,8 +25,7 @@ public class ApiExecutionService implements ExecutionService
 	 * @param price    	  Stock price to sell at
 	 * @param volume      Amount of stock to sell
 	 */
-    public void sell(String security, double price, int volume)
-    {
+    public void sell(String security, double price, int volume) {
     	String message = "SELL " + volume + " " + security + " @ " + price;
     	System.out.println(message);
     }
