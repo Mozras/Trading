@@ -7,7 +7,7 @@ import org.junit.After;
 /**
  * App Tester.
  *
- * @author <Authors name>
+ * @author <Mozamel Rasouli >
  * @since <pre>May 14, 2020</pre>
  * @version 1.0
  */
