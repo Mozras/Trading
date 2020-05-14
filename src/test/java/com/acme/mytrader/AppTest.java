@@ -1,20 +1,45 @@
 package com.acme.mytrader;
 
-import com.acme.mytrader.price.ApiPriceSource;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
-
-
 
 /**
  * App Tester.
  *
  * @author <Authors name>
- * @since <pre>May 13, 2020</pre>
+ * @since <pre>May 14, 2020</pre>
  * @version 1.0
  */
 public class AppTest {
+
+    @Before
+    public void before() throws Exception {
+    }
+
+    @After
+    public void after() throws Exception {
+    }
+
+    /**
+     *
+     * Method: buildApiPriceSource(String security)
+     *
+     */
+    @Test
+    public void testBuildApiPriceSource() throws Exception {
+//TODO: Test goes here...
+    }
+
+    /**
+     *
+     * Method: buildTradingStrategy(int amount, double price, ApiPriceSource priceSource, String security)
+     *
+     */
+    @Test
+    public void testBuildTradingStrategy() throws Exception {
+//TODO: Test goes here...
+    }
 
     /**
      *
@@ -23,8 +48,6 @@ public class AppTest {
      */
     @Test
     public void testMain() throws Exception {
-
-
 //TODO: Test goes here...
     }
 

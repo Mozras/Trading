@@ -51,6 +51,7 @@ public class ApiPriceSource implements PriceSource {
             JsonObject current_price = new Gson().fromJson(res, JsonObject.class);
             //gets price value from json body
 			double updatedPrice = current_price.get("price").getAsDouble();
+			System.out.println(updatedPrice);
 			//sends chosen stock and current price to be added to the listener arraylist
 			updateListeners(security, updatedPrice);
 			//this makes sure to send a get request every 5 seconds

@@ -46,6 +46,7 @@ public class TradingStrategy implements PriceListener
 	public void priceUpdate(String security, double price) {
     	if (this.securityToBuy.equals(security) && price <= this.priceToBuy) {
     		this.executionService.buy(this.securityToBuy, this.priceToBuy, this.amountToBuy);
+
     		// we only want to do the trade once, so stop listening after we buy
     		this.priceSource.removePriceListener(this);
     	}

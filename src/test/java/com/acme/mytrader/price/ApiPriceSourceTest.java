@@ -1,76 +1,36 @@
 package com.acme.mytrader.price;
 
-import okhttp3.OkHttpClient;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import okhttp3.*;
 import org.junit.Test;
-import org.junit.Before;
-import org.junit.After;
+import java.util.Objects;
 
-import java.util.ArrayList;
+import static org.junit.Assert.assertEquals;
 
 /**
  * ApiPriceSource Tester.
  *
- * @author <Authors name>
+ * @author <Mozamel Rasouli>
  * @since <pre>May 13, 2020</pre>
  * @version 1.0
  */
 public class ApiPriceSourceTest {
-
-    @Before
-    public void before() throws Exception {
-         final ArrayList<PriceListener> listeners;
-         final String security;
-
-    }
-
-    @After
-    public void after() throws Exception {
-
-    }
-
-    /**
+     /**
      *
      * Method: tick()
      *
      */
     @Test
     public void testTick() throws Exception {
-        ApiPriceSource test1 = new ApiPriceSource("AAPL");
+        final OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .url("https://financialmodelingprep.com/api/v3/stock/real-time-price/AAPL")
+                .build();
 
-        test1.tick();
-        //TODO: Test goes here...
-    }
-
-    /**
-     *
-     * Method: addPriceListener(PriceListener listener)
-     *
-     */
-    @Test
-    public void testAddPriceListener() throws Exception {
-//TODO: Test goes here...
-    }
-
-    /**
-     *
-     * Method: removePriceListener(PriceListener listener)
-     *
-     */
-    @Test
-    public void testRemovePriceListener() throws Exception {
-//TODO: Test goes here...
-    }
-
-
-    /**
-     *
-     * Method: updateListeners(String security, double price)
-     *
-     */
-    @Test
-    public void testUpdateListeners() throws Exception {
-//TODO: Test goes here...
-
-    }
-
+        Response response = client.newCall(request).execute();
+        String res = Objects.requireNonNull(response.body()).string();
+        JsonObject stock = new Gson().fromJson(res, JsonObject.class);
+        String symbol = stock.get("symbol").getAsString();
+        assertEquals(symbol, "AAPL"); }
 }
