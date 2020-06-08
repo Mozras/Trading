@@ -41,17 +41,16 @@ public class ApiPriceSource implements PriceSource {
 		}
 		final OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
-                .url("https://financialmodelingprep.com/api/v3/stock/real-time-price/" + security)
+                .url("https://financialmodelingprep.com/api/v3/stock/real-time-price/" + security +"?apikey=demo")
                 .build();
-
-        try (Response response = client.newCall(request).execute()) {
+         try (Response response = client.newCall(request).execute()) {
             if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
             String res = Objects.requireNonNull(response.body()).string();
             JsonObject current_price = new Gson().fromJson(res, JsonObject.class);
 
             //gets price value from json body
 			updatedPrice = current_price.get("price").getAsDouble();
-//			System.out.println("Current stock price: " + updatedPrice);
+			System.out.println("Current stock price: " + updatedPrice);
 
 			//sends chosen stock and current price to be added to the listener arraylist
 			updateListeners(security, updatedPrice);
@@ -59,8 +58,8 @@ public class ApiPriceSource implements PriceSource {
 			//this makes sure to send a get request every 5 seconds
 			Thread.sleep(5000);
 
-		} catch (IOException | InterruptedException e1) {
-			e1.printStackTrace();
+			} catch (IOException | InterruptedException e1) {
+				e1.printStackTrace();
 		}
 		return false;
 	}

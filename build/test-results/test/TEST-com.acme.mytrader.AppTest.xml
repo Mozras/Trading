@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.acme.mytrader.AppTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-06-08T22:38:51" hostname="MR" time="0.003">
+  <properties/>
+  <testcase name="testBuildTradingStrategy" classname="com.acme.mytrader.AppTest" time="0.002"/>
+  <testcase name="testMain" classname="com.acme.mytrader.AppTest" time="0.001"/>
+  <testcase name="testBuildApiPriceSource" classname="com.acme.mytrader.AppTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

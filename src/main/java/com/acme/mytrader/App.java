@@ -17,7 +17,6 @@ public class App {
 	public static ApiPriceSource buildApiPriceSource(String security) {
 		return new ApiPriceSource(security);
 	}
-
 	/**
 	 * builds a design pattern for executing the app
 	 *

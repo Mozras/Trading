@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.acme.mytrader.price.ApiPriceSourceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-06-08T22:38:49" hostname="MR" time="1.762">
+  <properties/>
+  <testcase name="testTick" classname="com.acme.mytrader.price.ApiPriceSourceTest" time="1.762"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -25,7 +25,7 @@ public class ApiPriceSourceTest {
     public void testTick() throws Exception {
         final OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
-                .url("https://financialmodelingprep.com/api/v3/stock/real-time-price/AAPL")
+                .url("https://financialmodelingprep.com/api/v3/stock/real-time-price/AAPL"+"?apikey=demo")
                 .build();
 
         Response response = client.newCall(request).execute();

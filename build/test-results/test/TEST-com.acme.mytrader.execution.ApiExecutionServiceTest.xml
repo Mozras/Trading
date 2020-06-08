@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.acme.mytrader.execution.ApiExecutionServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-06-08T22:38:51" hostname="MR" time="0.021">
+  <properties/>
+  <testcase name="testBuy" classname="com.acme.mytrader.execution.ApiExecutionServiceTest" time="0.021"/>
+  <system-out><![CDATA[
+Bought 200 AAPL shares for:
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
