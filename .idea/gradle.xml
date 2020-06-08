@@ -6,6 +6,10 @@
       <GradleProjectSettings>
         <option name="delegatedBuild" value="true" />
         <option name="testRunner" value="GRADLE" />
+<<<<<<< HEAD
+=======
+        <option name="disableWrapperSourceDistributionNotification" value="true" />
+>>>>>>> 90d987bc9a8149760eef611dff8007f9c8f9dc21
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleJvm" value="12" />

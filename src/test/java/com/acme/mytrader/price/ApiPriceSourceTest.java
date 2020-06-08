@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.acme.mytrader.price;
 
 import com.google.gson.Gson;
@@ -34,3 +35,5 @@ public class ApiPriceSourceTest {
         String symbol = stock.get("symbol").getAsString();
         assertEquals(symbol, "AAPL"); }
 }
+=======
+>>>>>>> 90d987bc9a8149760eef611dff8007f9c8f9dc21
